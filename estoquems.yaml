@@ -1,0 +1,29 @@
+datasource:
+  url: jdbc:mysql://localhost:3306/s_estoque?useSSL=false&serverTimezone=UTC
+  username: root
+  password: root
+  driverClassName: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    database: mysql
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+
+server:
+  port: 8082
+
+eureka:
+  instance:
+    hostname: localhost
+
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
