@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: estoquems
+          uri: lb://ESTOQUEMS
+          predicates:
+            - Path=/dummy-estoquems/**
+          filters:
+            - RewritePath=/dummy-estoquems/(?<path>;*),/$\{path}
+        - id: reservams
+          uri: lb://RESERVAMS
+          predicates:
+            - Path=/dummy-reservams/**
+          filters:
+            - RewritePath=/dummy-reservams/(?<path>;*),/$\{path}
+
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
