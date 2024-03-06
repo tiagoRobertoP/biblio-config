@@ -1,0 +1,6 @@
+server:
+  port: 9002
+
+# logging:
+#   pattern:
+#     level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
