@@ -1,0 +1,12 @@
+server:
+  port: 8084
+
+
+eureka:
+  instance:
+    hostname: localhost
+
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
