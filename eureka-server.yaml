@@ -8,5 +8,5 @@ server:
 eureka:
   client:
     fetch-registry: false
-  service-url:
-    defaultZone: http://127.0.0.1:8761/eureka
+  # service-url:
+  #   defaultZone: http://127.0.0.1:8761/eureka
