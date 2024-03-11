@@ -5,7 +5,8 @@ server:
 eureka:
   instance:
     hostname: localhost
-
+  service-url:
+      defaultZone: ${eureka_url:http://host.docker.internal:8761/eureka}
 
 logging:
   pattern:
