@@ -4,7 +4,7 @@ server:
 
 eureka:
   instance:
-    hostname: 192.168.56.1
+    hostname: host.docker.internal
 
 
 logging:
