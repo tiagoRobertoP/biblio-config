@@ -5,7 +5,9 @@ server:
 eureka:
   instance:
     hostname: host.docker.internal
-  service-url:
+  client:
+    service-url:
+      fetch-registry: true
       defaultZone: http://host.docker.internal:8761/eureka
 
 logging:
