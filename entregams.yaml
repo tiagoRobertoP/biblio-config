@@ -5,10 +5,7 @@ server:
 eureka:
   instance:
     hostname: 192.168.56.1
-  client:
-    service-url:
-      fetch-registry: true
-      defaultZone: ${eureka_url:http://192.168.56.1:8761/eureka}
+
 
 logging:
   pattern:
