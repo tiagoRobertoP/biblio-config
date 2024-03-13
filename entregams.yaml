@@ -2,10 +2,16 @@ server:
   port: 8084
 
 
+#eureka:
+#  instance:
+#    hostname: localhost
 eureka:
-  instance:
-    hostname: 192.168.56.1
-
+  client:
+    enabled: true
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://192.168.56.1:8761/eureka
 
 logging:
   pattern:
