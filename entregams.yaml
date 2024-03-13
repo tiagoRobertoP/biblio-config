@@ -4,11 +4,8 @@ server:
 
 eureka:
   instance:
-    hostname: 192.168.56.1
-    eureka:
-      client:
-        service-url:
-          defaultZone: http://192.168.56.1:8761/eureka
+    hostname: localhost
+
 
 
 logging:
