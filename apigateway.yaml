@@ -14,6 +14,12 @@ spring:
             - Path=/dummy-reservams/**
           filters:
             - RewritePath=/dummy-reservams/(?<path>;*),/$\{path}
+        - id: entregams
+          uri: lb://ENTREGAMS
+          predicates:
+            - Path=/dummy-entregams/**
+          filters:
+            - RewritePath=/dummy-entregams/(?<path>;*),/$\{path}
 
 server:
   port: 8081
