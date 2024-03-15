@@ -1,5 +1,5 @@
 server:
-  port: 8084
+  port: 8123
 
 
 eureka:
@@ -15,10 +15,3 @@ eureka:
 logging:
   pattern:
     level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
-
-spring:
-  cloud:
-    stream:
-      kafka:
-        binder:
-          healthTimeout: 5
