@@ -23,6 +23,9 @@ spring:
       discovery:
         enabled: true
         service-id: config-server
+      uri:  http://host.docker.internal:9999
+      enabled: true      
+      fail-fast: true  
 
 eureka:
   instance:
