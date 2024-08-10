@@ -18,11 +18,20 @@ spring:
       hibernate:
         naming:
           physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: host.docker.internal
+   client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: ${eureka_url:http://host.docker.internal:8761/eureka}    
 
 
 logging:
